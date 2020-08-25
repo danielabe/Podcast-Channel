@@ -1,0 +1,535 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap");
+*, html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: 0;
+}
+
+header {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header .logo {
+  width: 24px;
+  height: 24px;
+  margin: 10px 16px;
+}
+header .navigator {
+  width: 56px;
+}
+header .navigator .checkbox-nav {
+  display: none;
+}
+header .navigator .checkbox-label {
+  /* width: 18px;
+  height: 12px; */
+}
+header .navigator .checkbox-label .fa-bars {
+  margin: 16px 19px;
+  font-size: 18px;
+  width: 18px;
+  height: 12px;
+}
+header .navigator .checkbox-label .fa-times {
+  display: none;
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+  margin: 16px 16px 14px 22px;
+}
+header .navigator .menu {
+  height: 0px;
+  overflow: hidden;
+  background-color: #0000EC;
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  transition: height 1s;
+}
+header .navigator .menu .menu-item {
+  list-style: none;
+}
+header .navigator .menu .menu-item .menu-title {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: block;
+  margin: 16px 0px 8px 16px;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+}
+header .navigator .menu .menu-item .menu-title:hover {
+  color: #00F3BB;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+header .navigator .menu .menu-item .menu-title:active {
+  color: rgba(6, 10, 36, 0.56);
+}
+
+main .cover-page h1 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  color: #060A24;
+  margin: 29px 0 16px 5%;
+  width: 80%;
+  font-weight: 400;
+}
+main .cover-page h1 .strikethrough {
+  text-decoration: line-through;
+  font-family: "IBM Plex Sans", sans-serif;
+  /* por que no lo hereda? */
+}
+main .cover-page .description-mobile {
+  color: #060A24;
+  font-size: 14px;
+  line-height: 22px;
+  width: 90%;
+  margin: 0 5% 36px 5%;
+  font-weight: 400;
+}
+main .cover-page .description-desktop {
+  color: #060A24;
+  font-size: 14px;
+  line-height: 22px;
+  width: 90vw;
+  margin: 0 5% 36px 5%;
+  max-width: 800px;
+  display: none;
+  font-weight: 800;
+}
+main .cover-page .showmore {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 22px;
+  color: #060A24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5% 37px;
+  background-color: #00F3BB;
+  width: 90%;
+  max-width: 450px;
+  height: 48px;
+  font-weight: 500;
+}
+main .cover-page .showmore:hover {
+  color: #FFFFFF;
+  background: linear-gradient(60deg, #38a3b8 0%, black 0%, #00f0b8 0%, #00f0b8 6%, #0000fe 100%);
+}
+main .episodes {
+  width: 100%;
+  padding-bottom: 143.5px;
+  /* esto para que era? */
+  position: relative;
+}
+main .episodes .episodes-bg {
+  background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  padding-bottom: 143.5px;
+  transform: skewY(-5deg);
+  position: absolute;
+  height: 1203.5px;
+  z-index: -1;
+}
+main .episodes .episodes-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  color: #FFFFFF;
+  font-weight: 400;
+  padding: 50px 0 21px 5%;
+}
+main .episodes .container-iframe {
+  display: grid;
+  grid-template: repeat(4, 1fr)/93.125%;
+  grid-gap: 11px;
+  justify-content: center;
+}
+main .episodes .container-iframe .episode {
+  width: 100%;
+  height: 232px;
+  border: none;
+  overflow: hidden;
+}
+main .where-we-come-from .container-where-we-come-from {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-90px);
+}
+main .where-we-come-from .container-where-we-come-from .description-where-we-come-from .where-we-come-from-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: #060A24;
+  line-height: 42px;
+  width: 90%;
+  margin: 27px 5% 8px 5%;
+}
+main .where-we-come-from .container-where-we-come-from .description-where-we-come-from .paragraph {
+  font-size: 14px;
+  color: #060A24;
+  line-height: 22px;
+  font-weight: 400;
+  width: 90%;
+  margin: 0 5% 12px 5%;
+}
+main .guests .guests-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  color: #060A24;
+  line-height: 42px;
+  font-weight: 400;
+  width: 90%;
+  margin: -48px 5% 14px 5%;
+}
+main .guests .container-images {
+  display: grid;
+  grid-template: repeat(6, 1fr)/1fr;
+}
+main .guests .container-images .image {
+  line-height: 0;
+}
+main .topics .topics-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  color: #060A24;
+  line-height: 42px;
+  font-weight: 400;
+  width: 90%;
+  margin: 48px 5% 24px 5%;
+}
+main .topics .topics-grid {
+  display: grid;
+  grid-template: repeat(4, 1fr)/1fr;
+  row-gap: 36px;
+  width: 100%;
+  margin-bottom: 42px;
+}
+main .topics .topics-grid .figure-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+main .topics .topics-grid .figure-icon .topic {
+  width: 104px;
+  margin: 13px 0 13px 0;
+}
+main .topics .topics-grid .figure-icon .topic-name {
+  width: 90%;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  color: #060A24;
+  text-align: center;
+  font-weight: 600;
+  width: 90%;
+}
+
+footer .news {
+  position: relative;
+  overflow: hidden;
+}
+footer .news .news-bg {
+  background: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  transform-origin: top right;
+  height: 341px;
+  transform: skewY(-5deg);
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+}
+footer .news .news-title {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 36px;
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 42px;
+  font-weight: 400;
+  padding: 64px 5% 36px 5%;
+  position: relative;
+}
+footer .news .buttom {
+  position: relative;
+  padding-bottom: 67px;
+  display: flex;
+  justify-content: center;
+}
+footer .news .buttom .listen-episodes {
+  text-decoration: none;
+  font-size: 16px;
+  color: #060A24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 22px;
+  background-color: #00F3BB;
+  width: 90%;
+  max-width: 450px;
+  height: 48px;
+  font-weight: 500;
+}
+footer .news .buttom .listen-episodes:hover {
+  color: #FFFFFF;
+  background: linear-gradient(60deg, #38a3b8 0%, black 0%, #00f0b8 0%, #00f0b8 6%, #0000fe 100%);
+}
+footer .networks {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  background: white;
+}
+footer .networks .foot {
+  font-size: 14px;
+  color: #060A24;
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 16px;
+  margin-top: 24px;
+  font-weight: 400;
+}
+footer .networks .footer-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 31px;
+}
+footer .networks .footer-icons .networks-links {
+  display: inline-block;
+  width: 16px;
+  margin: 0 19px;
+}
+footer .networks .footer-icons .networks-links .fab {
+  font-size: 16px;
+  line-height: 28px;
+  color: black;
+}
+footer .networks .footer-icons:hover {
+  cursor: pointer;
+}
+
+.checkbox-nav:checked ~ .menu {
+  height: 224px;
+  width: 100%;
+  background-color: #0000EC;
+  transition: height 1s ease-in-out;
+}
+
+.checkbox-nav:checked ~ .checkbox-label .fa-times {
+  display: inline-block;
+}
+
+.checkbox-nav:checked ~ .checkbox-label .fa-bars {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    width: 100%;
+    height: 80px;
+  }
+  header .logo {
+    width: 36px;
+    height: 36px;
+    margin: 22px 0 22px 100px;
+  }
+  header .navigator .menu {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 35vw;
+    min-width: 530px;
+    background-color: #FFFFFF;
+    margin-right: 76px;
+  }
+  header .navigator .menu .menu-item {
+    width: min-content;
+  }
+  header .navigator .menu .menu-item .menu-title {
+    width: min-content;
+    color: #060A24;
+    margin: 0;
+    padding: 10px 24px;
+    font-weight: 400;
+  }
+  header .navigator label .fa-bars {
+    display: none;
+  }
+
+  main .cover-page h1 {
+    font-size: 64px;
+    line-height: 84px;
+    margin: 120px 0 0 13.89%;
+  }
+  main .cover-page h1 .dot {
+    color: #0000EC;
+  }
+  main .cover-page .description-mobile {
+    display: none;
+  }
+  main .cover-page .description-desktop {
+    display: block;
+    width: 43.61%;
+    margin: 0 0 56px 13.89%;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  main .cover-page .showmore {
+    width: 226px;
+    height: 56px;
+    margin: 0 0 68px 13.89%;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  main .episodes .episodes-bg {
+    height: 916.6px;
+  }
+  main .episodes .episodes-title {
+    font-size: 48px;
+    padding: 123px 0 26px 13.89%;
+  }
+  main .episodes .container-iframe {
+    /* arreglar margen iframe */
+    grid-template: repeat(2, 1fr)/repeat(2, 40.5%);
+    grid-gap: 72px;
+  }
+  main .where-we-come-from .container-where-we-come-from {
+    flex-direction: row;
+    transform: translateY(-70px);
+  }
+  main .where-we-come-from .container-where-we-come-from .phone {
+    width: 31.78%;
+    margin-left: 13.89%;
+    min-width: 350px;
+  }
+  main .where-we-come-from .container-where-we-come-from .description-where-we-come-from {
+    width: 36%;
+    margin-left: 4.33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main .where-we-come-from .container-where-we-come-from .description-where-we-come-from .where-we-come-from-title {
+    font-size: 48px;
+    color: #060A24;
+    margin-bottom: 24px;
+  }
+  main .where-we-come-from .container-where-we-come-from .description-where-we-come-from .paragraph {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  main .guests .guests-title {
+    font-size: 48px;
+    line-height: 62px;
+    margin: -6px 0 36px 13.89%;
+    width: 500px;
+  }
+  main .guests .container-images {
+    grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+  }
+  main .topics .topics-title {
+    font-size: 48px;
+    line-height: 62px;
+    font-weight: 400;
+    margin: 64px 0 56px 13.89%;
+    width: 600px;
+  }
+  main .topics .topics-grid {
+    grid-template: 1fr/repeat(4, 1fr);
+    padding: 0 14%;
+    margin-bottom: 34px;
+  }
+  main .topics .topics-grid .figure-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  main .topics .topics-grid .figure-icon .topic {
+    margin: 13px 0 29px 0;
+  }
+
+  footer .news {
+    height: 518px;
+  }
+  footer .news .news-bg {
+    height: 518px;
+    overflow: hidden;
+  }
+  footer .news .news-title {
+    font-size: 48px;
+    line-height: 62px;
+    padding: 213px 5% 36px 5%;
+  }
+  footer .news .buttom {
+    padding-bottom: 151px;
+  }
+  footer .news .buttom .listen-episodes {
+    font-size: 18px;
+    line-height: 24px;
+    width: 23.96%;
+    margin: 0 38%;
+    min-width: 270px;
+    height: 56px;
+    top: -151px;
+  }
+  footer .networks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .networks .foot {
+    font-size: 16px;
+    line-height: 28px;
+    width: 346px;
+    margin: 36px 0 31px 100px;
+  }
+  footer .networks .footer-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 36px 82px 31px 0;
+    width: min-content;
+    box-sizing: border-box;
+  }
+  footer .networks .footer-icons .networks-links {
+    width: 18px;
+    height: 28px;
+    margin: 0 18px;
+  }
+  footer .networks .footer-icons .networks-links .fab {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+@media screen and (max-width: 1130px) and (min-width: 768px) {
+  main .where-we-come-from .container-where-we-come-from {
+    flex-direction: row;
+    transform: translateY(-9px);
+  }
+  main .where-we-come-from .container-where-we-come-from .phone {
+    margin-left: 5%;
+  }
+  main .where-we-come-from .container-where-we-come-from .description-where-we-come-from {
+    width: 50%;
+  }
+  main .guests .guests-title {
+    margin: 10px 0 36px 13.89%;
+  }
+  main .topics .topics-grid {
+    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+  }
+}
